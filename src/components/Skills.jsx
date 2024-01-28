@@ -6,7 +6,7 @@ import { requestStates } from '../constants';
 export const Skills = () => {
   // const [languageList, setLanguageList] = useState([]);
   // console.log("languageList" + languageList);
-  const [sortedLanguageList, fetchRequestState, converseCountToPercentage] = useSkills();
+  const [sortedLanguageList, fetchRequestState] = useSkills();
   // const [state, dispatch] = useReducer(skillReducer, initialState);
 
   // useEffect(() => {
@@ -28,17 +28,17 @@ export const Skills = () => {
   //     });
   // }, []);
 
-  const generateLanguageCountObj = (allLanguageList) => {
-    const notNullLanguageList = allLanguageList.filter(language => language != null);
-    const uniqueLanguageList = [...new Set(notNullLanguageList)];
+  // const generateLanguageCountObj = (allLanguageList) => {
+  //   const notNullLanguageList = allLanguageList.filter(language => language != null);
+  //   const uniqueLanguageList = [...new Set(notNullLanguageList)];
 
-    return uniqueLanguageList.map(item => {
-      return {
-        language: item,
-        count: allLanguageList.filter(language => language === item).length
-      }
-    });
-  };
+  //   return uniqueLanguageList.map(item => {
+  //     return {
+  //       language: item,
+  //       count: allLanguageList.filter(language => language === item).length
+  //     }
+  //   });
+  // };
 
   const convertCountToPercentage = (count) => {
     if (count > 10) { return 100; }
