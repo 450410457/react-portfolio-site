@@ -1,8 +1,8 @@
 import { requestStates } from '../constants';
 
-const action = {
-  payload: { languageList: [{ count: 1, language: 'Ruby' }, { count: 2, language: 'JavaScript' }] }
-}
+// const action = {
+//   payload: { languageList: [{ count: 1, language: 'Ruby' }, { count: 2, language: 'JavaScript' }] }
+// }
 
 
 export const actionTypes = {
